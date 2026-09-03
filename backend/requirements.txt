@@ -1,0 +1,27 @@
+# NOTE: pydantic-core is a Rust extension — pre-built wheels are available for
+# Python ≤ 3.13 on Windows.  Python 3.12 no longer ships binary installers;
+# use Python 3.13 (https://python.org/downloads) to create the venv:
+#   py -3.13 -m venv .venv
+# If you must use Python 3.14, install Visual Studio Build Tools first.
+
+# ── Web framework ───────────────────────────────────────────────────────────────
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# ── Config ─────────────────────────────────────────────────────────────────────
+pydantic==2.11.0
+pydantic-settings==2.7.0
+
+# ── Database / Auth ──────────────────────────────────────────────────────────
+supabase==2.7.4          # Supabase Python client
+python-jose[cryptography]==3.3.0   # JWT verification
+
+# ── HTTP client (for Grok API) ────────────────────────────────────────────────
+httpx==0.27.2
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=8.0
+pytest-asyncio>=0.24
